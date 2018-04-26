@@ -1,0 +1,122 @@
+/* Style CSS fieldset */
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+#map-id {
+  
+  height: 500px;
+  width: 700px;
+  padding: 0;
+  margin: 0;
+}
+
+.text1 {
+  background-color: White;
+}
+
+#timeline2 {
+  background-image: url("https://github.com/Mehreenhai/BikeShareProject/blob/master/bikewheel.png?raw=true");
+  background-size: 57% 57%;
+  background-repeat: no-repeat;
+  background-position: 76px 100px; 
+  
+  
+  
+}
+.bg {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    /* position: absolute; */
+    width: 25%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+/* .map-overlay .legend .bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #FCA107, #7F3121); */
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+
+.container div {
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.container div .bg {
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("http://jftrumm.com/wp-content/uploads/2015/07/2015-06-10-20.20.25.jpg");
+  background-size: cover;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  background-position: left top;
+  padding: 20px; 
+}
+
+body {
+  /* background:#B0E3E3; */
+  background: linear-gradient(180deg, #F0FFFF, #B0C4DE);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#transition {
+  width: 80px;
+  height: auto;
+  background-color: #00FA9A;
+  color: black;
+  position: relative;
+  padding: 10px;
+  float: left;
+  margin: 5px;
+  -webkit-transition: -webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+  transition-property: width,height,transform,background,font-size,opacity;
+  transition-duration: 1s,1s,1s,1s,1s,1s;
+  border-radius: 5px;
+  opacity: 0.4;
+}
+
+#transition:hover {
+  width: 40%;
+}
+
+#timeline2 {padding-top: 20px;}

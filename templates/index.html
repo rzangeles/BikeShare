@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="http://www.ridemetrobike.com/wp-content/uploads/2016/04/cropped-metro-bike-share-favicon.png"/>
+    <title>Chicago BikeShare vs Traffic Incidents</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
+  
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <div class="bg"></div>
+            <h1><strong>Number of Bikeshare Stations vs. Number of Traffic Incidents</strong></h1>
+            <p><strong>In the City of Chicago between 2013-2017</strong></p>
+        </div>    
+    <!-- The div that holds our map -->
+    <div class="row">      
+        <div class="col-md-8" id="map-id"></div>
+        <hr>
+        <div class=" col-md-offset-1 col-md-3 text1">
+            <h5><center>
+                <b>Group Members:</b> Aizza, Mehreen, Nikki and Rommel
+                <br><br>
+                <b>Aim:</b> To vizualize the relationship (if any) between the increase of bikeshare stations in Chicago and traffic incidents in the city.
+                <br><br>
+                <b>Methods:</b>Heatmap, Piechart, timeseries line chart.
+                </center> 
+            </h5>
+        </div>
+    </div> 
+        <!-- <div class='map-overlay top'>
+            <div class='map-overlay-inner'>
+                <h2>Chicago BikeShare</h2>
+                <label id='year'></label>
+                <input id='slider' type='range' min='0' max='5' step='1' value='0' />
+            </div>    
+        </div> -->
+    <!-- The div that holds the timeline chart -->
+    <div class="row">
+        <div class="col-md-12" style="height:50px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="height:50px;"></div>
+    </div>
+            
+    <div class="row">
+        
+        <div>     
+                <div class="col-md-4 text1">
+                        <h5>
+                            Findings: </h5>
+                            <p> We first plotted the stations and bike violations on a map together, but this did not show a very clear correlation. 
+                            <br><br>
+                            Next we plotted the same data on a line chart, scaling for the 2 different data sets. And this shows a clear negative correlation between the bike share trips taken and speed violations.
+                            <br><br>
+                            This might not prove causation since there could be an external factor driving both these changes, it is interesting to see the values move together.                            
+                       </p>
+                    </div>
+ 
+            <div class=" col-md-offset-1 col-md-7 piec">
+                    
+                    <canvas id="timeline1" width="50" height="25"></canvas>  
+                    
+           
+            </div>              
+        </div>
+    </div> 
+    
+    <div class="row">
+            <div class="col-md-12" style="height:50px;"></div>
+    </div>
+    <div class="row">
+            <div class="col-md-12" style="height:50px;"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">         
+            <canvas id="timeline2" width="50" height="50">  </canvas>  
+                    
+        </div> 
+        <div class="col-md-offset-2 col-md-4 text1">
+                <br><br>
+                
+                    <p> 
+                    It was also interesting to note that only around 25% of rides were taken by females.                   
+                    <br><br>
+               </p>
+            </div>
+    </div>
+    
+    <div class="row">
+            <div class="col-md-12" style="height:50px;"></div>
+    </div>
+    <div class="row">
+            <div class="col-md-12" style="height:50px;"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 text1">
+                <br><br>
+                
+                    <p> 
+                    Furthermore, its interesting to see how the number of subscribers has increased every year, while the number of customers remains the same from year to year, showing that the brand is growing its repeat customers day by day.                  
+                    <br><br>
+                </p>
+        </div>
+        <div class="col-md-offset-1 col-md-7">   
+    <canvas id="timeline3" width="90" height="50">  </canvas>  
+        </div>
+
+    </div>
+        
+    <!-- The div that holds our analysis --> 
+        <div class="row">
+            <div id="transition">
+            <div class="col-md-4"></div>
+            </div>
+            <div class="col-md-8"></div>
+        </div>    
+    </div>  
+
+<!-- D3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+<!-- ChartJs JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+<!-- LEAFLET-HEAT -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
+  
+<!-- Our JavaScript -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+<!-- ChartJS Script -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/trips.js') }}"></script>
+
+</body>
+</html>
